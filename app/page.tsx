@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
@@ -17,12 +18,13 @@ export default function Home() {
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.5 }}
         className="relative"
       >
         <ScrollProgress />
         <Navbar />
         <Hero />
+        <HowItWorks />
         <Features />
         <SocialProof />
         <Pricing />
