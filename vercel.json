@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd naya-landing && npm install && npm run build",
+  "outputDirectory": "naya-landing/.next",
+  "installCommand": "echo 'install handled in buildCommand'",
+  "devCommand": "cd naya-landing && npm run dev",
+  "framework": "nextjs"
+}
