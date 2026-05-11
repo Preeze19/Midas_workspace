@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+import AnimatedStat from "@/components/AnimatedStat";
 
 const stats = [
   { value: "30%+", label: "Leads Recovered" },
@@ -114,7 +115,7 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Animated stats */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -123,18 +124,12 @@ export default function Hero() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
           >
             {stats.map((s, i) => (
-              <motion.div
+              <AnimatedStat
                 key={s.label}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + i * 0.08, duration: 0.5 }}
-                className="flex flex-col"
-              >
-                <span className="text-3xl sm:text-4xl font-extrabold gradient-text leading-none">
-                  {s.value}
-                </span>
-                <span className="text-sm text-naya-muted mt-1">{s.label}</span>
-              </motion.div>
+                value={s.value}
+                label={s.label}
+                delay={i * 120}
+              />
             ))}
           </motion.div>
         </div>

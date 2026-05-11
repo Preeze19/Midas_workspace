@@ -8,6 +8,8 @@ import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import FloatingCTA from "@/components/FloatingCTA";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
         transition={{ duration: 0.4 }}
         className="relative"
       >
+        <ScrollProgress />
         <Navbar />
         <Hero />
         <Features />
@@ -25,6 +28,7 @@ export default function Home() {
         <Pricing />
         <FAQ />
         <Footer />
+        <FloatingCTA />
       </motion.main>
     </AnimatePresence>
   );
